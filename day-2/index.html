@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>                                                   // Script will not contains 
+                                                               // console.logs, because here
+        let title = '30 Days Of JavaScript';                   // i only write solutions to challenges
+
+        title               // 30 Days Of JavaScript
+
+        title.length        // 21
+
+        title.toUpperCase() // 30 DAYS OF JAVASCRIPT 
+
+        title.toLowerCase() // 30 days of javascript
+
+        title.substring(0, 2)   // 30
+
+        title.substring(2)     // Days Of JavaScript
+
+        title.includes('Script')  // true
+
+        let titleIntoArray = title.split(' ');  //  [ "30", "Days", "Of", "JavaScript" ]
+
+        let topCompanies = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon'.split(', ')
+
+        topCompanies    // [ "Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon" ]
+
+        title.replace('JavaScript', 'Python')   // 30 Days Of Python
+        
+        title.charAt(15)          // S
+
+        title.charCodeAt('J')     // 51
+
+        title.indexOf('a')        // 4
+
+        title.lastIndexOf('a')    // 14
+
+        'You cannot end a sentence with because because because is a conjunction'.indexOf('because')       // 31
+
+        'You cannot end a sentence with because because because is a conjunction'.lastIndexOf('because')   // 47 
+
+        ' Hi there! '.trim()      // "Hi there!"
+
+        title.startsWith('30')        // true
+
+        title.endsWith('JavaScript')  // true
+
+        title.match(/a/gi) // [ "a", "a", "a" ] =>  g- global search, i- case insensitive
+
+        '30 '.concat('Days Of', ' JavaScript')  // "30 Days Of JavaScript"
+
+        title.repeat(2)         // "30 Days Of JavaScript30 Days Of JavaScript"
+
+
+
+        /*************
+            LEVEL 2:
+        **************/
+
+        "The quote \"There is no exercise better for the heart than reaching down and lifting people up.\" by John Holmes teaches us to help one another"  // Usage of Escape sequence charecters
+                                                                                                                                                           // The quote "There is no exercise better for the heart than 
+                                                                                                                                                           // reaching down and lifting people up." by John Holmes 
+                                                                                                                                                           // teaches us to help one another
+
+        '\"Love is not patronizing and charity isn\'t about pity, it is about love. Charity and love are the same -- with charity you give love, so don\'t just give money but reach out your hand instead.\"'  // Another example of
+                                                                                                                                                                                                                // using Escape sequence charecters
+
+        typeof parseInt('10') === typeof 10       // true
+
+        Math.ceil(parseFloat('9.8')) === 10       // true
+
+        'python'.includes('on') && 'jargon'.includes('on')   // true
+
+        'I hope this course is not full of jargon'.includes('jargon')   // true
+        
+        Math.floor(Math.random()*100)       // 21
+
+        Math.floor(Math.random()*51)+50     // 72
+
+        Math.floor(Math.random()*255)       // 224
+
+        'JavaScript'.charAt(Math.floor(Math.random()*'Javascript'.length-1))      // Gives a random charecter from "JavaScript". Eg: 'v', 'S', 't', 'J'
+
+        '1 1 1 1 1 \n2 1 2 4 8 \n3 1 3 9 27 \n4 1 4 16 64 \n5 1 5 25 125 \n';     // Generates a Pattern
+                                                                                  //  1 1 1 1 1 
+                                                                                  //  2 1 2 4 8 
+                                                                                  //  3 1 3 9 27 
+                                                                                  //  4 1 4 16 64 
+                                                                                  //  5 1 5 25 125 
+
+        let sentence = 'You cannot end a sentence with because because because is a conjunction';
+        
+        sentence.substring(sentence.indexOf('because'), sentence.match(/because/gi).length)   // slices out "because because because"
+
+
+
+        /*************
+            LEVEL 3
+        **************/
+        'Love is the best thing in this world. Some found their love and some are still looking for their love.'.match(/love/gi).length  // No.of "love" in string => 3
+
+        'You cannot end a sentence with because because because is a conjunction'.match(/because/g).length          // No.of "because" in string => 3
+
+        const sentenceFromLevel3 = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching';
+
+        sentenceFromLevel3.replace(/[^\w\s]/gi, '')
+        /*
+        - This regular expression matches any character that is not a word character or whitespace character.
+        - The "g" and "i" flags make it global and case-insensitive.
+        - Respectively, This means that it will replace all occurrences of such characters in a string 
+
+        Output:
+            - I am a teacher and I love teaching There is nothing as more rewarding as educating and empowering...
+        */
+
+        const sentenceToCalculate =  'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.';
+
+        const totalIncomeEarned = sentenceToCalculate.match(/\d+/g)  // RegExp for Digits(integers)
+
+        totalIncomeEarned     // [ "5000", "10000", "15000" ]
+
+</script>
+</body>
+</html>

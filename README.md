@@ -8,7 +8,7 @@ In this repository, I will be sharing my solutions to the exercise challenges pr
 
 #### My Progress:
 -  [x] 01 Introduction 
--  [ ] 02 Data Types 
+-  [x] 02 Data Types 
 -  [ ] 03 Booleans Operators Date
 -  [ ] 04  Conditionals
 -  [ ] 05  Arrays
@@ -37,6 +37,4 @@ In this repository, I will be sharing my solutions to the exercise challenges pr
 -  [ ] 28  Mini Project: Leaderboard
 -  [ ] 29  Mini Project: Animated characters
 -  [ ] 30  **FINAL PROJECTS** 
-
-**_Note: I will add relative links shortly_**
 
