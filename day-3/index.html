@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*********************
+            LEVEL 1:
+    **********************/
+        
+/*1*/  let firstName = 'Abdul',
+            lastName = 'Khalid',
+            country = 'India',
+            city = 'city',
+            age = 18,
+            isMarried = false,
+            year = new Date().getFullYear();
+
+        typeof firstName // string
+        typeof lastName  // string
+        typeof country   // string
+        typeof city      // string
+        typeof age  // number
+        typeof isMarried  // boolean
+        typeof year  // number
+        
+/*2*/   typeof '10' === 10      // false
+/*3*/   parseInt('9.8') === 10  // false
+
+/*4*/    '5' !== 5 ? true : false                            // true
+        parseInt('5') === 5 ? true : false                  // true
+        Math.floor(parseFloat('5.6')) === 5 ? true : false  // true
+
+        '5' === 5 ? true : false                            // false
+        parseInt('5') !== 5 ? true : false                  // false
+        Math.ceil(parseFloat('5.6')) === 5 ? true : false   // false
+        
+/*5*/   4 > 3       // true
+        4 >= 3      // true
+        4 < 3       // false
+        4 <=3       // false
+        4 == 4      // true
+        4 === 4     // true
+        4 != 4      // false
+        4 !== 4     // false
+        4 != '4'    // false
+        4 !== '4'   // true
+        4 == '4'    // true
+        4 === '4'   // false
+        'python'.length !== 'jargon'.length  // false
+
+
+/*6*/   4 > 3 && 10 < 12        // true 
+        4 > 3 && 10 > 12        // false
+        4 > 3 || 10 < 12        // true
+        4 > 3 || 10 > 12        // true
+        !(4 > 3)                //  false
+        !(4 < 3)                // true
+        !(false)                // true
+        !(4 > 3 && 10 < 12)     // false
+        !(4 > 3 && 10 > 12)     // true
+        !(4 === '4')            // true
+        !('dragon'.includes('on') && 'python'.includes('on'))   // false
+
+
+/*7*/   const dateObject = new Date();       // Declaring object to a variable
+
+        dateObject.getFullYear()            // 2023
+        dateObject.getMonth()               // 2 (March)
+        dateObject.getDate()                // 2nd March
+        dateObject.getDay()                 // 4 (Thursday)
+        dateObject.getHours()               // 19
+        dateObject.getMinutes()             // 30
+        dateObject.getTime()                // 1677765795030 Milliseconds
+
+        
+
+    /*********************                 I'm gonna comment the code which uses "prompt()"
+            LEVEL 2:                       because it will slow down the whole system if you
+                                           run this script in your browser
+    *********************/                 
+
+        /*
+        
+    1.  const triangleBase = prompt('Enter the Base'),
+              triangleHeight = prompt('Enter the Height'),
+              areaOfTriangle = 0.5 * triangleBase * triangleHeight;
+        
+        alert(`The area of the Triangle is ${areaOfTriangle}`)  // Result will be alerted
+
+
+   2.   const triangleSideA = parseFloat(prompt('Enter side A:')),
+              triangleSideB = parseFloat(prompt('Enter side B:')),
+              triangleSideC = parseFloat(prompt('Enter side C: ')),
+              perimeterOfTriangle = triangleSideA + triangleSideB + triangleSideC;
+        
+        alert(`The perimeter of the Triangle is ${perimeterOfTriangle}`)  // Result will be alerted
+
+
+
+   3.   const rectangleLength = parseFloat(prompt('Length of Rectangle: ')),
+              rectangleWidth = parseFloat(prompt('Width of Rectangle: ')),
+              areaOfRectangle = rectangleLength * rectangleWidth,
+              perimeterOfRectangle = 2 * (rectangleLength + rectangleWidth);
+        
+        alert(`The Area of the rectangle is ${areaOfRectangle}`)            // Result will be alerted
+        alert(`The Perimeter of the rectangle is ${perimeterOfRectangle}`)  // Result will be alerted
+
+               
+   4.   const pi = 3.14,
+              radiusOfCircle = parseFloat(prompt('Radius of Circle: ')),
+              areaOfCircle = pi * radiusOfCircle * radiusOfCircle,
+              circumferenceOfCircle = 2 * pi * radiusOfCircle;     
+              
+        alert(`The Area of the Circle is ${areaOfCircle}`)                    // Result will be alerted
+        alert(`The Circumference of the Circle is ${circumferenceOfCircle}`)  // Result will be alerted
+    
+
+        I'm skipping 6,7,8 🥲
+        
+
+   9.   const totalHours = parseFloat(prompt('Total Hours Worked: ')),
+              ratePerHour = parseFloat(prompt('Rate Per Hour: ')),
+              totalEarning = totalHours * ratePerHour;     
+              
+        alert(`Your Weekly earning is ${totalEarning}`)                    // Result will be alerted
+        
+
+  10.   const yourName = prompt('Enter your Name: '),
+              shortOrLong = yourName.length > 7 ? 'long' : 'short';    
+              
+        alert(`Your name is ${shortOrLong}`)                             // Result will be alerted
+        **/
+        
+/*11*/  let firstNameFromAnime = 'Sasuke',      // NANDOMO !
+            lastNameFromAnime = 'Uchiha',
+            result = firstNameFromAnime.length > lastNameFromAnime.length
+                     ? `Your first name, ${firstNameFromAnime} is longer than your family name, ${lastNameFromAnime}`
+                     : `Your family name, ${lastNameFromAnime} is longer than your first name, ${firstNameFromAnime}`
+
+        result   // Your family name, Uchiha is longer than your first name, Sasuke
+
+/*12*/  let myAge = 18,
+            yourAge = 30,
+            resultFromComparison = `I am ${myAge > yourAge ? myAge : yourAge} years older than you` 
+            
+        resultFromComparison   // I am 30 years older than you
+        
+        
+/*
+  13.   const userDateOfBirth = dateObject.getFullYear() - parseInt(prompt('Enter your Date of Birth: ')),
+              allowedOrNot = userDateOfBirth >= 18 
+                             ? `You are ${userDateOfBirth}. You are old enough to drive` 
+                             : `You are ${userDateOfBirth}. You will be allowed to drive after ${18-userDateOfBirth} years`;    
+              
+        alert(allowedOrNot)
+    */
+
+        
+/*14*/  const secondsPerMinute = 60,
+              minutesPerHour = 60,
+              hoursPerDay = 24,
+              daysPerYear = 365,
+              yearsYouLive = 100;
+        
+        ((((yearsYouLive*365)*24)*60)*60)   // 3153600000
+        
+        
+/*15*/  function stringToTimeFormatter(stringToBeFormatted){
+
+            let formattedString = stringToBeFormatted
+                                    .replace('YYYY', dateObject.getFullYear())
+                                    .replace('MM', dateObject.getMonth()+1)
+                                    .replace('DD', dateObject.getDate())
+                                    .replace('HH', dateObject.getHours())
+                                    .replace('mm', dateObject.getMinutes())
+
+            return formattedString;
+        }
+
+        stringToTimeFormatter('YYYY-MM-DD HH:mm')   // 2023-03-05 19:33
+        stringToTimeFormatter('DD-MM-YYYY HH:mm')   // 05-03-2023 19:33
+        stringToTimeFormatter('DD/MM/YYYY HH:mm')   // 05/03/2023 19:34
+
+
+
+    /*********************
+            LEVEL 3:
+    **********************/   
+
+/*1*/  function stringToTimeFormatter(stringToBeFormatted){
+
+            function singleToDualDigit(digit){
+                return digit < 10 ? `0${digit}` : digit
+            }
+
+            let formattedString = stringToBeFormatted
+                                    .replace('YYYY', dateObject.getFullYear())
+                                    .replace('MM', singleToDualDigit(dateObject.getMonth()+1))
+                                    .replace('DD', singleToDualDigit(dateObject.getDate()))
+                                    .replace('HH', singleToDualDigit(dateObject.getHours()))
+                                    .replace('mm', singleToDualDigit(dateObject.getMinutes()))
+
+            return formattedString;
+        } 
+
+        stringToTimeFormatter('YYYY-MM-DD HH:mm')   // 2023-03-05 19:32
+
+    </script>
+</body>
+</html>
