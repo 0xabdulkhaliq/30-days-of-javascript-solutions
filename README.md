@@ -9,7 +9,7 @@ In this repository, I will be sharing my solutions to the exercise challenges pr
 #### My Progress:
 -  [x] 01 Introduction 
 -  [x] 02 Data Types 
--  [ ] 03 Booleans Operators Date
+-  [x] 03 Booleans Operators Date
 -  [ ] 04  Conditionals
 -  [ ] 05  Arrays
 -  [ ] 06  Loops
