@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*********************     Will be comment out the
+            LEVEL 1:           "prompts" because it tends to 
+                               slow down the entire site
+    *********************/      
+
+        
+        
+// /*1*/   const userAge = parseInt(prompt('Enter your age: ')),
+//               isAllowed = userAge >= 18
+//                           ? 'You are old enough to drive'
+//                           : `You are left with ${userAge-18} years to drive`;
+        
+//         alert(isAllowed)     // Result will be alerted
+
+
+//         const yourAge = parseInt(prompt('Enter your age: ')),
+//               myAge = 18,
+//               whoIsOlder = yourAge > 18
+//                            ? `You are ${yourAge-myAge} years older than me`
+//                            : `You are ${myAge-yourAge} years younger than me`;
+
+//         alert(whoIsOlder)    // Result will be alerted
+
+
+        let a = 4,
+            b = 3;
+        
+        if(a>b){                                        // 4 is greater than 3
+            console.log(`${a} is greater than ${b}`)
+        }else { 
+            console.log(`${b} is greater than ${a}`)    // Done with Normal If-else & Ternery
+        }
+
+        a > b ? console.log(`${a} is greater than ${b}`) : console.log(`${b} is greater than ${a}`);
+
+
+        // const number = parseInt(prompt('Enter a Number: ')),
+        //       isOddOrEven = number % 2 === 0
+        //                    ? `${number} is an even number`
+        //                    : `${number} is an odd number`;
+
+        // alert(isOddOrEven)    // Result will be alerted
+
+
+        
+    /*********************
+            LEVEL 2:
+    *********************/
+   
+        
+        let score = 0
+
+        function calculateGrades(score){
+
+            if(score >= 80){
+                return 'A';
+            }else if (score >=70){
+                return 'B';
+            }else if (score >= 60){
+                return 'C';
+            }else if (score >= 50){
+                return 'D';
+            }else if (score >=0){
+                return 'F';
+            }else {
+                return 'Enter valid Score';
+            }
+        }
+
+        calculateGrades(score)    // F - Last Benchers 😎
+
+
+        function capitalizeFirstLetter(word){       // This function will be invoked in upcoming lines
+            return word.replace(word.charAt(0), 
+                                word.charAt(0).toUpperCase())
+        }
+
+
+        function getSeason(month){
+            
+            if ('September' || 'October' || 'November'){
+                return capitalizeFirstLetter('Autumn')
+            }
+            else if ('December' || 'January' || 'February'){
+                return capitalizeFirstLetter('Winter')
+            }
+            else if ('March' || 'April' || 'May') {
+                return capitalizeFirstLetter('Spring')
+            }
+            else if ('June' || 'July' || 'August') {
+                return capitalizeFirstLetter('Summer')
+            }
+            else {
+                return 'Enter a valid month'
+            }
+        }
+
+        getSeason('September');  // Autumn
+
+
+    
+        function checkWeekends(day){
+            day.toLowerCase();
+
+            if(day === 'sunday' || day === 'saturday') {
+                return `${capitalizeFirstLetter(day)} is a weekend`
+            }
+            else {
+                return `${capitalizeFirstLetter(day)} is a working day`
+            }
+        }
+        
+        checkWeekends('Sunday')  // Sunday is a working day
+
+
+    /*********************
+            LEVEL 3:
+    *********************/
+
+/*                                     Commented out the
+    let month = 'January';             whole part to due
+                                       redeclaring this for
+    function getDaysInMonth(month){    next iteration
+        let daysCount;
+
+        switch(month){
+
+            case 'january':
+                daysCount = 31;
+                break;
+
+            case 'february':
+                daysCount = 28;
+                break;
+
+            case 'march':
+                daysCount = 31;
+                break;
+
+            case 'april':
+                daysCount = 30;
+                break;
+
+            case 'may':
+                daysCount = 31;
+                break;
+
+            case 'june':
+                daysCount = 30; 
+                break;
+
+            case 'july':
+                daysCount = 31; 
+                break;
+            
+            case 'august':
+                daysCount = 31; 
+                break;
+            
+            case 'september':
+                daysCount = 30; 
+                break;
+
+            case 'october':
+                daysCount = 31; 
+                break;
+
+            case 'november':
+                daysCount = 30; 
+                break;
+
+            case 'december':
+                daysCount = 31; 
+                break;
+        }
+    
+        return `${capitalizeFirstLetter(month)} has ${daysCount} days.`
+    }
+
+    */
+
+
+    function getDaysInMonth(_month){
+        let month = _month.toLowerCase()
+
+        let daysCount;
+
+        switch(month){
+
+            case 'january':
+                daysCount = 31;
+                break;
+
+            case 'february':
+                daysCount = 29; // Considering as a Leap year
+                break;
+
+            case 'march':
+                daysCount = 31;
+                break;
+
+            case 'april':
+                daysCount = 30;
+                break;
+
+            case 'may':
+                daysCount = 31;
+                break;
+
+            case 'june':
+                daysCount = 30; 
+                break;
+
+            case 'july':
+                daysCount = 31; 
+                break;
+            
+            case 'august':
+                daysCount = 31; 
+                break;
+            
+            case 'september':
+                daysCount = 30; 
+                break;
+
+            case 'october':
+                daysCount = 31; 
+                break;
+
+            case 'november':
+                daysCount = 30; 
+                break;
+
+            case 'december':
+                daysCount = 31; 
+                break;
+        }
+
+        return `${capitalizeFirstLetter(month)} has ${daysCount} days.`
+    }
+
+    getDaysInMonth('February')    // February has 29 days.
+    </script>
+</body>
+</html>
