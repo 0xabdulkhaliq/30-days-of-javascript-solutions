@@ -10,7 +10,7 @@ In this repository, I will be sharing my solutions to the exercise challenges pr
 -  [x] 01 Introduction 
 -  [x] 02 Data Types 
 -  [x] 03 Booleans Operators Date
--  [ ] 04  Conditionals
+-  [x] 04  Conditionals
 -  [ ] 05  Arrays
 -  [ ] 06  Loops
 -  [ ] 07  Functions
