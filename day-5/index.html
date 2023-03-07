@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./countries.js" defer></script>
+    <script src="./webTechs.js" defer></script>
+    <script src="./index.js" defer></script>
+    <script>
+
+        let emptyArray = [];
+
+        let arrayWithMoreThanFiveElements = [1, 2, 3, 4, 5, 6, 7];
+
+        arrayWithMoreThanFiveElements.length  // Length - 7
+
+        arrayWithMoreThanFiveElements[0];     // 1
+        arrayWithMoreThanFiveElements[Math.floor(arrayWithMoreThanFiveElements.length/2)]  // 4
+        arrayWithMoreThanFiveElements[-1];    // 7
+
+        let arrayWithMixedDataTypes = [
+            1,
+            'Two',
+            3,
+            true,
+        ]
+
+        let itCompanies = [
+            'Facebook',
+            'Google',
+            'Microsoft',
+            'Apple',
+            'IBM',
+            'Oracle',
+            'Amazon'
+        ]
+
+
+        itCompanies     // "Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"
+
+        itCompanies.length      // Length - 7
+
+        itCompanies[0]
+        itCompanies[3]
+        itCompanies[-1]
+
+        itCompanies.forEach(company => company);     // Iterate through the loop and
+                                                    // returns items one by one
+
+        itCompanies.forEach(company => company.toUpperCase());   // Iterate through the loop and
+                                                                // returns items as uppercased string one by one
+
+        `${itCompanies.join(', ')} big IT Companies`;    // Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon big IT Companies
+
+        
+        let newCompany = 'Google';
+
+        itCompanies.includes(newCompany);   // true
+        
+        let filteredCompanies = [];
+
+        itCompanies.forEach(company => {        // To find companies with double 'o'
+
+            if (company.match(/o/gi) === null || company.match(/o/gi).length <= 1) return
+            
+            filteredCompanies.push(company);
+        })
+
+        filteredCompanies;     // "Facebook", "Google", "Microsoft"
+
+        itCompanies.sort();     // "Amazon", "Apple", "Facebook", "Google", "IBM", "Microsoft", "Oracle"
+
+        itCompanies.reverse();  // "Oracle", "Microsoft", "IBM", "Google", "Facebook", "Apple", "Amazon"
+
+        itCompanies.slice(0, 3);      // "Oracle", "Microsoft", "IBM"
+
+        itCompanies.reverse().slice(0, 3);   // "Amazon", "Apple", "Facebook"
+
+
+        function findCenterIndex(){                     // To find the center index dynamically due to
+            return Math.ceil(itCompanies.length/2)-1;    // splicing the array in future (on the way down)
+        }                                               
+        itCompanies.slice(findCenterIndex(), findCenterIndex()+1);  // Returns 'Google'
+
+
+
+        itCompanies.shift();          // Removes "Amazon" from the Array
+        itCompanies;                  // "Apple", "Facebook", "Google", "IBM", "Microsoft", "Oracle"
+
+        itCompanies.splice(findCenterIndex(), 1);   // Removes "Google" from the Array
+        itCompanies;                                // "Apple", "Facebook", "IBM", "Microsoft", "Oracle" 
+
+
+        itCompanies.pop();             // Removes "Oracle" from the Array
+        itCompanies;                   // "Apple", "Facebook", "IBM", "Microsoft" 
+
+        itCompanies.splice(0, itCompanies.length);  // Removes "Apple", "Facebook", "IBM", "Microsoft" From the Array
+        itCompanies;                                // [] - Empty Array
+
+
+        let sentence = 'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.';
+        let sentenceIntoArray;
+        
+        sentenceIntoArray = sentence                      // Truncates all special charecters 
+                            .replace(/[^\w\s]/gi, '')     // and splits the words into an array
+                            .split(' ');    
+        
+        sentenceIntoArray;                     // "I", "love", "teaching", "and", "empowering", "people", "I", "teach", "HTML", "CSS", …
+        sentenceIntoArray.length;              // Length: 13
+
+
+        const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey'];
+
+        shoppingCart.unshift('Meat');   // Inserts the element in 0'th Index
+        shoppingCart.push('Sugar');     // Appends the element to the Array
+        shoppingCart.pop('Honey');      // Removes element from Array
+
+        shoppingCart[shoppingCart.indexOf('Tea')] = 'Green Tea';   // You may wonder
+                                                                  // why "[shoppingCart.indexOf('Tea')]" instead of [2] ?
+                                                                  // Ans: I want to assure that the element can be modified
+                                                                  //      dynamically, because i can't always look for index
+                                                                  //      i just automated to search index itself
+
+    </script>
+</body>
+</html>

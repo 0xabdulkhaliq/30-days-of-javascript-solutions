@@ -11,7 +11,7 @@ In this repository, I will be sharing my solutions to the exercise challenges pr
 -  [x] 02 Data Types 
 -  [x] 03 Booleans Operators Date
 -  [x] 04  Conditionals
--  [ ] 05  Arrays
+-  [x] 05  Arrays
 -  [ ] 06  Loops
 -  [ ] 07  Functions
 -  [ ] 08  Objects
