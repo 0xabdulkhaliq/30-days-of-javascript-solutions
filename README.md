@@ -12,7 +12,7 @@ In this repository, I will be sharing my solutions to the exercise challenges pr
 -  [x] 03 Booleans Operators Date
 -  [x] 04  Conditionals
 -  [x] 05  Arrays
--  [ ] 06  Loops
+-  [x] 06  Loops
 -  [ ] 07  Functions
 -  [ ] 08  Objects
 -  [ ] 09  Higher Order Functions
