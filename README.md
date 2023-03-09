@@ -13,7 +13,7 @@ In this repository, I will be sharing my solutions to the exercise challenges pr
 -  [x] 04  Conditionals
 -  [x] 05  Arrays
 -  [x] 06  Loops
--  [ ] 07  Functions
+-  [x] 07  Functions
 -  [ ] 08  Objects
 -  [ ] 09  Higher Order Functions
 -  [ ] 10  Sets and Maps
