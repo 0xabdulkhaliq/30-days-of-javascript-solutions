@@ -17,7 +17,7 @@ In this repository, I will be sharing my solutions to the exercise challenges pr
 -  [x] 08  Objects
 -  [x] 09  Higher Order Functions
 -  [x] 10  Sets and Maps
--  [ ] 11  Destructuring and Spreading
+-  [x] 11  Destructuring and Spreading
 -  [ ] 12  Regular Expressions
 -  [ ] 13  Console Object Methods
 -  [ ] 14  Error Handling
