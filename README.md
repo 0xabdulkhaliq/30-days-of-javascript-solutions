@@ -19,7 +19,7 @@ In this repository, I will be sharing my solutions to the exercise challenges pr
 -  [x] 10  Sets and Maps
 -  [x] 11  Destructuring and Spreading
 -  [x] 12  Regular Expressions
--  [ ] 13  Console Object Methods
+-  [x] 13  Console Object Methods
 -  [ ] 14  Error Handling
 -  [ ] 15  Classes
 -  [ ] 16  JSON
