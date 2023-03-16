@@ -20,7 +20,7 @@ In this repository, I will be sharing my solutions to the exercise challenges pr
 -  [x] 11  Destructuring and Spreading
 -  [x] 12  Regular Expressions
 -  [x] 13  Console Object Methods
--  [ ] 14  Error Handling
+-  [x] 14  Error Handling
 -  [ ] 15  Classes
 -  [ ] 16  JSON
 -  [ ] 17  Web Storages
