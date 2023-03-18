@@ -22,7 +22,7 @@ In this repository, I will be sharing my solutions to the exercise challenges pr
 -  [x] 13  Console Object Methods
 -  [x] 14  Error Handling
 -  [ ] 15  Classes
--  [ ] 16  JSON
+-  [x] 16  JSON
 -  [ ] 17  Web Storages
 -  [ ] 18  Promises
 -  [ ] 19  Closure
