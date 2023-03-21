@@ -25,7 +25,7 @@ In this repository, I will be sharing my solutions to the exercise challenges pr
 -  [x] 16  JSON
 -  [x] 17  Web Storages
 -  [x] 18  Promises
--  [ ] 19  Closure
+-  [x] 19  Closure
 -  [ ] 20  Writing Clean Code
 -  [ ] 21  DOM 
 -  [ ] 22  Manipulating DOM Object
