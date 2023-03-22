@@ -26,7 +26,7 @@ In this repository, I will be sharing my solutions to the exercise challenges pr
 -  [x] 17  Web Storages
 -  [x] 18  Promises
 -  [x] 19  Closure
--  [ ] 20  Writing Clean Code
+-  [x] 20  Writing Clean Code
 -  [ ] 21  DOM 
 -  [ ] 22  Manipulating DOM Object
 -  [ ] 23  Event Listeners
