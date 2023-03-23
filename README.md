@@ -27,7 +27,7 @@ In this repository, I will be sharing my solutions to the exercise challenges pr
 -  [x] 18  Promises
 -  [x] 19  Closure
 -  [x] 20  Writing Clean Code
--  [ ] 21  DOM 
+-  [x] 21  DOM 
 -  [ ] 22  Manipulating DOM Object
 -  [ ] 23  Event Listeners
 -  [ ] 24  Mini Project: Solar System
