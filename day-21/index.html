@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #f7f7f7;
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            font-family: sans-serif;
+            color: #232323;
+            padding: 2em 0;
+        }
+
+        .wrapper {
+            display: grid;
+            gap: 2em;
+        }
+
+        li:first-child{
+            background: #5BBC7A;
+        }
+
+        li:nth-child(2){
+            background: #F7DC5C;
+        }
+
+        li {
+            list-style: none;
+            padding: 20px;
+            background: #EB695B;
+            margin-bottom: .5em;
+        }
+
+        h1 {
+           text-transform: uppercase;
+        }
+
+        .display-date-time, h2 {
+            justify-self: center;
+        }
+
+        span {
+            font-size: 3.5rem;
+        }
+
+        .display-date-time {
+            background: lightskyblue;
+            padding: 15px 20px;
+            text-shadow: 0 0 5px white, 0 0 30px white;
+        }
+
+        a {
+            color: #26405e;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="wrapper">
+        <h1>Asabeneh Yetayeh challenges in <span>2023</span></h1>
+        <h2><a href="https://github.com/Asabeneh/30-Days-Of-JavaScript" target="_blank" aria-describedby="Github repository for 30 days of javascript challenge">
+            30DaysOfJavaScript Challenge
+        </a></h2>
+        <div class="display-date-time">
+            March 23,2023 9:08:53
+        </div>
+        <ul>
+            <li>30DaysOfPython Challenge Done</li>
+            <li>30DaysOfJavaScript Challenge Ongoing</li>
+            <li>30DaysOfReact Challenge Coming</li>
+            <li>30DaysOfFullStack Challenge Coming</li>
+            <li>30DaysOfDataAnalysis Challenge Coming</li>
+            <li>30DaysOfReactNative Challenge Coming</li>
+            <li>30DaysOfMachineLearning Challenge Coming</li>
+        </ul>
+
+        <p id="paragraph-1">First Paragraph</p>
+        <p id="paragraph-2">Second Paragraph</p>
+        <p id="paragraph-3">Third Paragraph</p>
+        <p id="paragraph-4">Fourth Paragraph</p>
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+</html>
