@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>30DaysOfJavaScript:22 Day: Challenge Info</title>
+	<style>
+		body {
+			text-align: center;
+			font-family: sans-serif;
+			display: grid;
+			place-items: center;
+			min-height: 100vh;
+		}
+		
+		h1 {
+			text-transform: uppercase;
+			letter-spacing: .3em;
+		}
+
+		.wrapper {
+			width: 100%;
+			display: grid;
+			place-items: center;
+		}
+		
+		.wrapper > div {width: 70em;}
+	
+		.wrapper__top, 
+		.wrapper__btm {
+			display: flex;
+			width: 100%;
+			height: 40px;
+			font-size: 1.2rem;
+			padding: 20px;
+			border: 1px solid #ddd;
+			transition: .7s ease;
+		}
+
+		.wrapper__top {
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		h3 {
+			margin-left: 2em;
+		}
+
+		.wrapper__content-container {
+			position: relative;
+		}
+
+		img {
+			width: 20px;
+			position: absolute;
+			z-index: -1;
+			left: 1em;
+			transition: .7s ease;
+		}
+
+		.img--active {
+			transform: rotate(180deg);
+		}
+
+		.wrapper__top > p {
+			margin-right: 1em;
+		}
+
+		.wrapper__btm {
+			border-top-style: dashed;
+			border-top-width: 2px;
+			display: grid;
+			height: unset;
+			max-height: fit-content;
+			gap: 5px;
+			place-items: flex-start;
+		}
+
+		.wrapper__btm--disabled {
+			display: none;
+		}
+
+		.wrapper__btm > p {
+			margin-left: 2em;
+		}
+
+		details {
+			background: green;
+		}
+	
+		.countries-wrapper > div:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 10px 20px rgba(0,0,0,.1);
+		}
+	
+	
+		.attribution {
+			border-top: 1px solid #ddd;
+			width: 100%;
+			text-align: center;
+			margin-top: 1em;
+		}
+	
+		.attribution, a {
+			color: #252525;
+		}
+	
+	
+	</style>	
+</head>
+
+<body>
+	<main class="wrapper">
+		<div class="wrapper__content-container">
+			<div class="wrapper__top">
+				<img src="./icon-arrow-down.svg" alt="" class="img--active">
+				<h3>30DaysOfJavaScript</h3>
+				<p>Completed</p>
+			</div>
+			<div class="wrapper__btm">
+					<p>1</p>
+					<p>2</p>
+					<p>3</p>
+					<p>4</p>
+					<p>5</p>
+					<p>6</p>
+					<p>7</p>
+					<p>8</p>
+					<p>9</p>
+					<p>10</p>
+			</div>
+		</div>
+	</main>
+
+	<footer class="attribution">
+		<p>
+			Challenge by <a href="https://www.github.com/asabeneh/" target="_blank" rel="noopener">Asabeneh Yetayeh</a>. 
+			Coded by <a href="https://github.com/0xabdulkhalid" target="_blank" rel="noopener">0xabdulkhalid</a>.
+		</p>
+	</footer>
+
+	<script src="./data/challenges_info.js"></script>
+	<script src="./scripts/main.js"></script>
+
+</body>
+
+</html>
+
+</html>

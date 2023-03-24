@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>30DaysOfJavaScript:22 Day: World Countries List</title>
+</head>
+<style>
+	body {
+		text-align: center;
+		font-family: sans-serif;
+		display: grid;
+		place-items: center;
+		min-height: 100vh;
+	}
+	
+	h1 {
+		text-transform: uppercase;
+		letter-spacing: .3em;
+	}
+
+	.countries-wrapper {
+		margin-top: 1em;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+	}
+
+	.countries-wrapper > div {
+		width: 160px;
+		height: 160px;
+		font-size: 1.2rem;
+		padding: 20px;
+		display: grid;
+		place-items: center;
+		border: 1px solid #ddd;
+		transition: .7s ease;
+	}
+
+	.countries-wrapper > div:hover {
+		transform: translateY(-10px);
+		box-shadow: 0 10px 20px rgba(0,0,0,.1);
+	}
+
+
+	.attribution {
+		border-top: 1px solid #ddd;
+		width: 100%;
+		text-align: center;
+		bottom: 0;
+		margin-top: 1em;
+	}
+
+	.attribution, a {
+		color: #252525;
+	}
+
+
+</style>
+
+<body>
+	<header>
+		<h1>World Countries List</h1>
+
+		<h3 id="total-countries"></h3>
+		<p>30DaysOfJavaScript</p>
+		<p>Author: Asabeneh Yetayeh</p>
+
+	</header>
+
+	<main class="countries-container">
+		<div class="countries-wrapper">
+		</div>
+	</main>
+
+	<footer class="attribution">
+		<p>
+			Challenge by <a href="https://www.github.com/asabeneh/" target="_blank" rel="noopener">Asabeneh Yetayeh</a>. 
+			Coded by <a href="https://github.com/0xabdulkhalid" target="_blank" rel="noopener">0xabdulkhalid</a>.
+		</p>
+	</footer>
+
+
+	<script src="./data/countries.js" defer></script>
+	<script src="./scripts/main.js" defer></script>
+
+</body>
+
+</html>
+
+</html>
