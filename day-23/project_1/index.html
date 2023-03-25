@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>30DaysOfJavaScript:23 Day: Number Generator </title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			text-align: center;
+			font-family: sans-serif;
+			display: grid;
+			place-items: center;
+		}
+
+		h2 {
+			margin: .5em 0;
+		}
+
+		.wrapper {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 10px;
+			width: min(90%, 60em);
+			margin-bottom: 5em;
+		}
+
+		.wrapper > div {
+			width: 100px;
+			height: 70px;
+			font-size: 2rem;
+			color: white;
+			display: grid;
+			place-items: center;
+		}
+
+		.input-container {
+			width: min(90%, 50em);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 1em;
+			margin: 2em 0;
+		}
+
+		.error-prompter {
+			color: #FD5E53;
+			font-weight: bold;
+			word-wrap: break-word;
+		}
+
+		.sr-only {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			padding: 0;
+			margin: -1px;
+			overflow: hidden;
+			clip: rect(0, 0, 0, 0);
+			white-space: nowrap;
+			border-width: 0;
+		}
+
+		input { 
+			all: unset;
+			padding: 5px;
+			border: 1px solid #21BF73;
+			text-align: center;
+			width: 70%;
+		}
+
+		input:focus {
+			border-width: 3px;
+		}
+
+		button {
+			all: unset;
+			background: #21BF73;
+			padding: 10px 20px;
+			color: white;
+		}
+
+		.attribution {
+			border-top: 1px solid #ddd;
+			width: 100%;
+			text-align: center;
+			margin-top: 1em;
+			padding: 1em 0;
+			position: fixed;
+			bottom: 0;
+			background: rgba(255,255,255,0.5);
+			backdrop-filter: blur(5px);
+		}
+	
+		.attribution, a {
+			color: #252525;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h1>Number Generator</h1>
+	<h2>30DaysOfJavaScript:DOM Day 2</h2>
+	<h3>Author: Asabeneh Yetayeh</h3>
+	<div class="input-container">
+		<input type="number" name="number-to-generator" id="number-to-generate">
+		<p class="error-prompter"></p>
+		<label for="number-to-generate" class="sr-only">Enter a number to generate results</label>
+		<button type="submit" onclick="generateNumbers()">Generate Numbers</button>
+	</div>
+	<div class="wrapper"></div>
+
+	<footer class="attribution">
+		<p>
+			Challenge by <a href="https://www.github.com/asabeneh/" target="_blank" rel="noopener">Asabeneh Yetayeh</a>. 
+			Coded by <a href="https://github.com/0xabdulkhalid" target="_blank" rel="noopener">0xabdulkhalid</a>.
+		</p>
+	</footer>
+	<script src="./scripts/main.js"></script>
+</body>
+
+</html>

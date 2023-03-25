@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>30DaysOfJavaScript:23 Day: Keycode Generator </title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			text-align: center;
+			font-family: sans-serif;
+			display: grid;
+			place-items: center;
+			min-height: 100vh;
+			color: #252525;
+		}
+
+		h1 {
+			font-size: 2.1rem;
+			text-transform: uppercase;
+			letter-spacing: .02em;
+		}
+
+		h2 {
+			margin: .5em 0;
+		}
+
+		section {
+			position: fixed;
+			top: 3%;
+		}
+
+		.wrapper {
+			margin-top: 1em;
+			display: grid;
+			place-items: center;
+			gap: 10px;
+			width: min(90%, 60em);
+		}
+
+		h3 {
+			background: #f7f7f7;
+			padding: 1.2em 2.2em;
+			font-size: 2.2rem;
+			border-radius: 5em;
+			box-shadow: 0 15px 5px rgba(0,0,0,0.3);
+			transition: .2s ease;
+		}
+
+		.btn--clicked {
+			transform: scale(.99) translateY(15px);
+			box-shadow: unset;
+		}
+
+		.wrapper > div {
+			margin-top: .6em;
+			width: 120px;
+			height: 120px;
+			color: #21BF73;
+			font-weight: bold;
+			font-size: 5rem;
+			display: grid;
+			place-items: center;
+			padding: .1em;
+			border: 1px solid #ccc;
+		}
+
+		span {
+			color: #21BF73;
+			text-decoration: underline;
+		}
+
+		.attribution {
+			border-top: 1px solid #ddd;
+			width: 100%;
+			text-align: center;
+			margin-top: 1em;
+			padding: 1em 0;
+			position: fixed;
+			bottom: 0;
+			background: rgba(255,255,255,0.5);
+			backdrop-filter: blur(5px);
+		}
+	
+		.attribution, a {
+			color: #252525;
+		}
+
+	</style>
+</head>
+
+<body>
+	<section class="headings">
+		<h1>Keycode Generator</h1>
+		<h2>30DaysOfJavaScript</h2>
+	</section>
+	<div class="wrapper">
+		<h3 class="message-conveyer">Press any key to get <span>started</span></h3>
+		<div></div>
+	</div>
+
+	<footer class="attribution">
+		<p>
+			Challenge by <a href="https://www.github.com/asabeneh/" target="_blank" rel="noopener">Asabeneh Yetayeh</a>. 
+			Coded by <a href="https://github.com/0xabdulkhalid" target="_blank" rel="noopener">0xabdulkhalid</a>.
+		</p>
+	</footer>
+	<script src="./scripts/main.js"></script>
+</body>
+
+</html>

@@ -4,20 +4,46 @@
 <head>
 	<title>30DaysOfJavaScript:22 Day: Number Generator </title>
 	<style>
+		body {
+			text-align: center;
+			font-family: sans-serif;
+			display: grid;
+			place-items: center;
+		}
+		
 		.wrapper {
 			display: flex;
+			justify-content: center;
 			flex-wrap: wrap;
 			gap: 10px;
+			width: min(90%, 60em);
 		}
 
 		.wrapper > div {
 			width: 100px;
 			height: 70px;
 			font-size: 2rem;
-			color: wheat;
+			color: white;
 			display: grid;
 			place-items: center;
 		}
+
+		.attribution {
+			border-top: 1px solid #ddd;
+			width: 100%;
+			text-align: center;
+			margin-top: 1em;
+			padding: 1em 0;
+			position: fixed;
+			bottom: 0;
+			background: rgba(255,255,255,0.5);
+			backdrop-filter: blur(5px);
+		}
+	
+		.attribution, a {
+			color: #252525;
+		}
+
 	</style>
 </head>
 
@@ -25,13 +51,15 @@
 	<h1>Number Generator</h1>
 	<h2>30DaysOfJavaScript:DOM Day 2</h2>
 	<h3>Author: Asabeneh Yetayeh</h3>
-	<div class="wrapper">
-	</div>
+	<div class="wrapper"></div>
 
-
-
+	<footer class="attribution">
+		<p>
+			Challenge by <a href="https://www.github.com/asabeneh/" target="_blank" rel="noopener">Asabeneh Yetayeh</a>. 
+			Coded by <a href="https://github.com/0xabdulkhalid" target="_blank" rel="noopener">0xabdulkhalid</a>.
+		</p>
+	</footer>
 	<script src="./scripts/main.js"></script>
-
 </body>
 
 </html>
