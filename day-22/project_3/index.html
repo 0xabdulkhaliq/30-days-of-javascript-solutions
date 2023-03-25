@@ -4,6 +4,16 @@
 <head>
 	<title>30DaysOfJavaScript:22 Day: Challenge Info</title>
 	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		:root {
+			--bg-yellow: #FCD65B;
+			--bg-green: #4ADE80;
+			--bg-red: #F87171;
+		}
+
 		body {
 			text-align: center;
 			font-family: sans-serif;
@@ -14,21 +24,51 @@
 		
 		h1 {
 			text-transform: uppercase;
-			letter-spacing: .3em;
+			display: flex;
+			align-items: center;
+			gap: .8em;
 		}
 
-		.wrapper {
+        .display-date-time, h2 {
+            justify-self: center;
+        }
+
+        span {
+            font-size: 4.2rem;
+        }
+
+		section:first-of-type {
+			display: grid;
+			place-items: center;
+			gap: 1em;
+			margin-bottom: 2em;
+		}
+
+        .display-date-time {
+            background: lightskyblue;
+            padding: 15px 20px;
+			width: 15em;
+			color: white;
+            text-shadow: 0 0 5px black;
+			font-weight: bold;
+        }
+
+        a {
+            color: #26405e;
+        }
+
+		.challenges__wrapper,
+		.author-details__wrapper {
 			width: 100%;
 			display: grid;
 			place-items: center;
 		}
 		
-		.wrapper > div {width: 70em;}
+		.challenges__wrapper > div {width: 90%;}
 	
 		.wrapper__top, 
 		.wrapper__btm {
 			display: flex;
-			width: 100%;
 			height: 40px;
 			font-size: 1.2rem;
 			padding: 20px;
@@ -41,20 +81,20 @@
 			justify-content: space-between;
 		}
 
-		h3 {
+		.wrapper__content-container	h3 {
 			margin-left: 2em;
 		}
 
 		.wrapper__content-container {
 			position: relative;
+			color: white;
 		}
 
 		img {
 			width: 20px;
 			position: absolute;
-			z-index: -1;
 			left: 1em;
-			transition: .7s ease;
+			transition: .5s ease;
 		}
 
 		.img--active {
@@ -71,8 +111,9 @@
 			display: grid;
 			height: unset;
 			max-height: fit-content;
-			gap: 5px;
+			gap: .5em;
 			place-items: flex-start;
+			backdrop-filter: brightness(.8);
 		}
 
 		.wrapper__btm--disabled {
@@ -82,54 +123,190 @@
 		.wrapper__btm > p {
 			margin-left: 2em;
 		}
-
-		details {
-			background: green;
-		}
 	
 		.countries-wrapper > div:hover {
 			transform: translateY(-10px);
 			box-shadow: 0 10px 20px rgba(0,0,0,.1);
 		}
-	
-	
+
+		.author-details__wrapper {
+			margin-top: 2em;
+			width: 60em;
+			gap: 1em;
+		}
+
+		.author-details__wrapper h2{
+			font-size: 1.8rem;
+		}
+
+		.author-details__about { 
+			width: 50em; 
+			margin-top: 1.5em;
+			margin-bottom: 3em;
+		}
+
+		.author-details__stats {
+			width: 100%;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			text-align: left;
+		}
+
+		.author-details__stats h3 {
+			text-transform: uppercase;
+		}
+
+		ul {
+			margin-top: .5em;
+			display: grid;
+			gap: .3em;
+		}
+
+		.author-details__stats ul {
+			margin-left: 2.5em;
+		}
+
+		.stats__titles ul {
+			margin-left: 1em;
+			list-style-type: none;
+		}
+
+		.stats__skills li::marker {
+			content: "🎯  ";
+		}
+
+		.stats__qualifications li::marker {
+			content: "📖  ";
+		}
+
+		.author-details__socials {
+			display: flex;
+			gap: 1em;
+			justify-content: center;
+			padding-bottom: .5em;
+		}
+		.author-details__socials a {
+			border-radius: 50%;
+			border: 1px solid var(--gray);
+			width: 41px;
+			height: 41px;
+		}
+		.author-details__socials img {
+			width: 100%;
+			height:100%;
+			position: static;
+		}
+
+		.author-details__socials img:hover {
+			transform: translateY(-5px);
+			backdrop-filter: drop-shadow(0 10px 20px rgba(0,0,0,.1));
+		}
+
+		.author-details__keywords {
+			text-align: start;
+			width: 80%;
+			padding: 1em;
+			margin-top: 2em;
+			margin-bottom: 1em;
+
+		}
+
+		.author-details__keywords h3 {
+			text-transform: uppercase;
+		}
+
+		.keywords__container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 1em;
+			margin-top: 1em;
+		}
+
+		.keywords__container p {
+			background: #252525;
+			padding: .5em 1em;
+			border: 1px solid #eee;
+			box-shadow: 0 3px 10px rgba(0,0,0,.1);
+			border-radius: 20px;
+			color: white;
+			transition: .5s ease;
+		}
+
+		.keywords__container p:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 5px 20px rgba(0,0,0,.2);
+		}
+
 		.attribution {
 			border-top: 1px solid #ddd;
 			width: 100%;
 			text-align: center;
 			margin-top: 1em;
+			padding: 1em 0;
+			position: fixed;
+			bottom: 0;
+			background: rgba(255,255,255,0.5);
+			backdrop-filter: blur(5px);
 		}
 	
 		.attribution, a {
 			color: #252525;
 		}
 	
-	
 	</style>	
 </head>
 
 <body>
-	<main class="wrapper">
-		<div class="wrapper__content-container">
-			<div class="wrapper__top">
-				<img src="./icon-arrow-down.svg" alt="" class="img--active">
-				<h3>30DaysOfJavaScript</h3>
-				<p>Completed</p>
+	<section>
+		<h1>Asabeneh Yetayeh challenges in <span>2023</span></h1>
+        <h2><a href="https://github.com/Asabeneh/30-Days-Of-JavaScript" target="_blank" aria-describedby="Github repository for 30 days of javascript challenge">
+            30DaysOfJavaScript Challenge
+        </a></h2>
+        <div class="display-date-time">
+            March 23,2023 9:08:53
+        </div>
+	</section>
+	<section class="challenges__wrapper"></section>
+	<section class="author-details__wrapper">
+		<h2>
+			Asabeneh Yetayeh
+		</h2>
+		<div class="author-details__socials">
+			<a href="#" aria-label="Follow me on Linkedin">
+				<img src="./images/linkedin.svg" alt="" aria-hidden="true">
+			</a>
+			<a href="#" aria-label="Follow me on Twitter">
+				<img src="./images/twitter.svg" alt="" aria-hidden="true">
+			</a>
+			<a href="#" aria-label="Follow me on Github">
+				<img src="./images/github.svg" alt="" aria-hidden="true">
+			</a>  
+		</div>
+		<div class="author-details__about">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel laborum nisi molestias aut iste magni fuga, deleniti minus odio? Doloremque vel nisi assumenda eveniet quam eum totam itaque alias dolorum?
+			Earum, laudantium distinctio fugit omnis, quidem quaerat iusto adipisci reiciendis sapiente nisi rem commodi id autem voluptatem. Dolor magni id, voluptas sequi sed perspiciatis harum repellendus quia consequuntur nobis consequatur!
+			Ea possimus totam dolores a iste adipisci, nisi quidem aliquam ut, perspiciatis obcaecati quo praesentium rem fugiat esse non veritatis illum, temporibus tempora earum facilis! Delectus sed debitis error neque.
+		</div>
+		<div class="author-details__stats">
+			<div class="stats__titles">
+				<h3>titles</h3>
+				<ul></ul>
 			</div>
-			<div class="wrapper__btm">
-					<p>1</p>
-					<p>2</p>
-					<p>3</p>
-					<p>4</p>
-					<p>5</p>
-					<p>6</p>
-					<p>7</p>
-					<p>8</p>
-					<p>9</p>
-					<p>10</p>
+			<div class="stats__skills">
+				<h3>skills</h3>
+				<ul></ul>
+			</div>
+			<div class="stats__qualifications">
+				<h3>qualifications</h3>
+				<ul></ul>
 			</div>
 		</div>
-	</main>
+		<div class="author-details__keywords">
+			<h3>Keywords</h3>
+			<div class="keywords__container"></div>
+		</div>
+	</section>
 
 	<footer class="attribution">
 		<p>
@@ -138,8 +315,9 @@
 		</p>
 	</footer>
 
-	<script src="./data/challenges_info.js"></script>
-	<script src="./scripts/main.js"></script>
+	<script src="./data/generatedColors.js" defer></script>
+	<script src="./data/challenges_info.js" defer></script>
+	<script src="./scripts/main.js" defer></script>
 
 </body>
 

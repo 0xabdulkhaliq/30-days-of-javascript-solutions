@@ -29,7 +29,7 @@ In this repository, I will be sharing my solutions to the exercise challenges pr
 -  [x] 20  Writing Clean Code
 -  [x] 21  DOM 
 -  [x] 22  Manipulating DOM Object
--  [ ] 23  Event Listeners
+-  [x] 23  Event Listeners
 -  [ ] 24  Mini Project: Solar System
 -  [ ] 25  Mini Project: World Countries Data Visualization 1
 -  [ ] 26  Mini Project: World Countries Data Visualization 2
