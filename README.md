@@ -31,8 +31,8 @@ In this repository, I will be sharing my solutions to the exercise challenges pr
 -  [x] 22  Manipulating DOM Object
 -  [x] 23  Event Listeners
 -  [x] 24  Mini Project: Solar System
--  [ ] 25  Mini Project: World Countries Data Visualization 1
--  [ ] 26  Mini Project: World Countries Data Visualization 2
+-  [x] 25  Mini Project: World Countries Data Visualization 1
+-  [x] 26  Mini Project: World Countries Data Visualization 2
 -  [ ] 27  Mini Project: Portfolio
 -  [ ] 28  Mini Project: Leaderboard
 -  [ ] 29  Mini Project: Animated characters
