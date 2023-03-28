@@ -1,6 +1,15 @@
+/*
+    Apologizing for using bad naming conventions of css selectors.
+    Probably i use bem but i had no enough time to focus on these things
+*/
+
 * {
     margin: 0;
     padding: 0;
+}
+
+html {
+    overflow-x: hidden;
 }
 
 body {
@@ -9,6 +18,7 @@ body {
     min-height: 100vh;
     color: #252525;
     background: #eee;
+    padding-bottom: 4em;
 }
 
 h1 {
@@ -46,6 +56,7 @@ progress {
     width: 45%;
     border: unset;
     height: 2em;
+    margin-left: 2em;
 }
 
 
@@ -92,7 +103,22 @@ button:active {
 .component {
     display: flex;
     justify-content: center;
-    gap: 2em;
+}
+
+.description {
+    width: 8em;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.get-started {
+    margin-top: 3em;
+    background: #f2f2f2;
+    padding: 2em;
+}
+
+.count {
+    width: 7em;
 }
 
 input:focus {
@@ -107,20 +133,21 @@ input:focus {
     padding: 1em 0;
     position: fixed;
     bottom: 0;
+    background: rgba(0,0,0,.01);
+    backdrop-filter: blur(5px);
+    transition: .5s ease;
 }
 
 header {
     padding: 20px;
 }
 
-/* header {
-    border-top: unset;
-    border-bottom: 1px solid #aaa;
-    bottom: unset;
-    top: 0;
-    margin: 0;
-} */
-
 .attribution, a {
-    color: #ddd;
+    color: #232323;
+}
+.attribution:hover {
+    background: rgba(0,0,0,.3);
+}
+.attribution:hover a {
+    color: #eee;
 }
