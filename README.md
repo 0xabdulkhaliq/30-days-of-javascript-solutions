@@ -34,7 +34,7 @@ In this repository, I will be sharing my solutions to the exercise challenges pr
 -  [x] 25  Mini Project: World Countries Data Visualization 1
 -  [x] 26  Mini Project: World Countries Data Visualization 2
 -  [x] 27  Mini Project: Portfolio
--  [ ] 28  Mini Project: Leaderboard
+-  [x] 28  Mini Project: Leaderboard
 -  [ ] 29  Mini Project: Animated characters
 -  [ ] 30  **FINAL PROJECTS** 
 
