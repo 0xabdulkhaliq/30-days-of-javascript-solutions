@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation - Day 30: 30DaysOfJavaScript</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <h1>Validating Web Forms</h1>
+    </header>
+
+    <main>
+        <form>
+            <div class="main__input-container">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name">
+                <p class="main__input-error-prompter">First name must be alphanumeric and contain 3-16 charecters</p>
+            </div>
+
+            <div class="main__input-container">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name">
+                <p class="main__input-error-prompter">Last name must be alphanumeric and contain 3-16 charecters</p>
+            </div>
+
+            <div class="main__input-container">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <p class="main__input-error-prompter">First name must be alphanumeric and contain 3-16 charecters</p>
+            </div>
+
+            <div class="main__input-container">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <p class="main__input-error-prompter">First name must be alphanumeric and contain 3-16 charecters</p>
+            </div>
+
+            <div class="main__input-container">
+                <label for="telephone">Telephone</label>
+                <input type="tel" id="telephone" name="telephone">
+                <p class="main__input-error-prompter">First name must be alphanumeric and contain 3-16 charecters</p>
+            </div>
+
+            <div class="main__input-container">
+                <label for="bio">Your Bio</label>
+                <input type="text" id="bio" name="bio">
+                <p class="main__input-error-prompter">First name must be alphanumeric and contain 3-16 charecters</p>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <script src="./main.js"></script>
+</body>
+</html>
