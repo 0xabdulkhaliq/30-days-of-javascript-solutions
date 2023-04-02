@@ -23,10 +23,11 @@ body {
 
 h1 {
     font-size: 2.1rem;
-    text-transform: uppercase;
     letter-spacing: .02em;
     color: #FFA500;
     margin-bottom: .35em;
+    font-variant: small-caps;
+    font-weight: 400;
 }
 
 
@@ -83,6 +84,7 @@ button {
     background: #FFA500;
     text-transform: uppercase;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 button:active {
@@ -136,27 +138,50 @@ input:focus {
     background: rgba(0,0,0,.01);
     backdrop-filter: blur(5px);
     transition: .5s ease;
+    font-size: .7rem;
 }
 
 header {
     padding: 20px;
+    display: grid;
+    gap: .5em;
 }
 
 .attribution, a {
     color: #232323;
 }
-.attribution:hover {
-    background: rgba(0,0,0,.3);
+
+
+
+.search-feedback {
+    font-size: .9rem;
+    color: #FFA500;
+    font-weight: 300;
 }
-.attribution:hover a {
-    color: #eee;
+.count-results {
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+input {
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 2em;
+    padding: 1em;
+}
+
+.controls-container > button {
+    border-radius: 5em;
+    font-size: .9rem;
+    padding: 1em 2em;
 }
 
 .countries-wrapper {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1em;
+    padding: 2em 0;
 }
 
 .country-container {
@@ -165,6 +190,8 @@ header {
     font-size: .85rem;
     display: grid;
     gap: .5em;
+    transition: .3s ease;
+    cursor: pointer;
 }
 
 .country-image, img {
@@ -183,4 +210,46 @@ header {
 .country-capital, .country-languages,
 .country-population {
     text-align: start;
+}
+
+button {
+    position: relative;
+}
+
+button::after, .sort-desc::after {
+    content: "➤";
+    position: absolute;
+    right: 2em;
+    font-size: 1.1rem;
+    transform: rotate(-90deg);
+    transition: 1s ease;
+}
+
+.sort-desc::after { transform: rotate(90deg);  }
+
+[value]::after {
+    display: none;
+}
+
+@media (min-width: 35.25em){    /*  FOR DESKTOPS  */
+    h1 {
+        font-size: 3rem;
+    }
+
+    .country-container:hover {
+        transform: translateY(-.5em);
+        box-shadow: 0 10px 10px rgba(0,0,0,.1);
+        background: #fafafa;
+    }
+
+    .attribution {
+        font-size: 1rem;
+    }
+
+    .attribution:hover {
+        background: rgba(0,0,0,.3);
+    }
+    .attribution:hover a {
+        color: #eee;
+    }
 }
