@@ -21,7 +21,7 @@ In this repository, I will be sharing my solutions to the exercise challenges pr
 -  [x] 12  Regular Expressions
 -  [x] 13  Console Object Methods
 -  [x] 14  Error Handling
--  [ ] 15  Classes
+-  [x] 15  Classes
 -  [x] 16  JSON
 -  [x] 17  Web Storages
 -  [x] 18  Promises
@@ -36,5 +36,5 @@ In this repository, I will be sharing my solutions to the exercise challenges pr
 -  [x] 27  Mini Project: Portfolio
 -  [x] 28  Mini Project: Leaderboard
 -  [x] 29  Mini Project: Animated characters
--  [ ] 30  **FINAL PROJECTS** 
+-  [x] 30  **FINAL PROJECTS** 
 

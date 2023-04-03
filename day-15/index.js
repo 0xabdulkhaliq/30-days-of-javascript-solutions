@@ -168,19 +168,79 @@ class Statistics {
 
 const statistics = new Statistics([31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26])
 
-console.log('Count:', statistics.count()) // 25
-console.log('Sum: ', statistics.sum()) // 744
-console.log('Min: ', statistics.min()) // 24
-console.log('Max: ', statistics.max()) // 38
-console.log('Range: ', statistics.range()) // 14
-console.log('Mean: ', statistics.mean()) // 30
-console.log('Median: ',statistics.median()) // 29
-console.log('Mode: ', statistics.mode()) // {'mode': 26, 'count': 5}
-console.log('Variance: ',statistics.var()) // 17.5
+console.log('Count:', statistics.count())           // 25
+console.log('Sum: ', statistics.sum())              // 744
+console.log('Min: ', statistics.min())              // 24
+console.log('Max: ', statistics.max())              // 38
+console.log('Range: ', statistics.range())          // 14
+console.log('Mean: ', statistics.mean())            // 30
+console.log('Median: ',statistics.median())         // 29
+console.log('Mode: ', statistics.mode())            // {'mode': 26, 'count': 5}
+console.log('Variance: ',statistics.var())          // 17.5
 console.log('Standard Deviation: ', statistics.std()) // 4.2
 
 
-/*
-Day 15 Challenges has not been completed.
-(gonna complete it tomorrow)
-*/
+class PersonAccount {
+    constructor(_firstName, _lastName) {
+        this.firstName = _firstName
+        this.lastName = _lastName
+        this.incomes = {}
+        this.expenses = {}
+    }
+
+    addIncome(description, income) {
+        if(description === undefined || income === undefined) return 'Provide valid values'
+
+        this.incomes[description] = income;
+        return 'Income has been added';
+    }
+
+    addExpense(description, expense) {
+        if(description === undefined || expense === undefined) return 'Provide valid values'
+
+        this.expenses[description] = expense;
+        return 'Expense has been added';
+    }
+
+    get totalExpense(){
+        const keys = Object.keys(this.expenses);
+        return keys.map(key => parseInt(this.expenses[key])).reduce((a,b)=> a+b, 0)
+    }
+
+    get totalIncome(){
+        const keys = Object.keys(this.incomes);
+        return keys.map(key => parseInt(this.incomes[key])).reduce((a,b)=> a+b, 0)
+    }
+
+    get accountInfo(){
+        return `Acc Name: ${this.firstName} ${this.lastName} \nTotal Income: ${this.totalIncome} \nTotal Expenses: ${this.totalExpense}`
+    }
+
+    get accountBalance(){
+        const totalBalance = this.totalIncome - this.totalExpense;
+        return `Account Balance: ${totalBalance}`
+    }
+
+}
+
+const abdulKhalidAccount = new PersonAccount('Abdul', 'Khalid');
+
+
+abdulKhalidAccount.addIncome('Salary', 10000)
+abdulKhalidAccount.addIncome('Passive', 5000)
+abdulKhalidAccount.addExpense('Rent', 3000)
+abdulKhalidAccount.addExpense('Food', 1000)
+
+abdulKhalidAccount.incomes        // Object { Salary: 10000, Passive: 5000 }
+abdulKhalidAccount.totalExpense   // 4000
+abdulKhalidAccount.totalIncome    // 15000
+
+
+abdulKhalidAccount.accountInfo  /*
+                                    Acc Name: Abdul Khalid 
+                                    Total Income: 15000 
+                                    Total Expenses: 4000
+                                    Account Balance: 11000
+                                */
+
+abdulKhalidAccount.accountBalance   // Account Balance: 11000
