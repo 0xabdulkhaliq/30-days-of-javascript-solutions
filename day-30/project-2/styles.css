@@ -5,7 +5,7 @@
 }
 
 body {
-    min-height: 100lvh;
+    min-height: 100vh;
     display: grid;
     place-items: center;
     text-align: center;
@@ -14,7 +14,7 @@ body {
     padding: 1em 0 2em 0;
 }
 
-h1 {
+.header__heading {
     font-variant: small-caps;
     font-weight: 400;
     letter-spacing: .05em;
@@ -53,12 +53,19 @@ input:focus {
 
 .main__input-container {
     width: 90%;
+    display: grid;
+    place-items: center;
+}
+
+label {
+    justify-self: start;
 }
 
 .main__input-error-prompter {
     color: #FFA500;
     font-weight: 400;
     font-size: .85rem;
+    width: 80%;
 }
 
 button {
@@ -69,8 +76,129 @@ button {
     font-weight: 400;
     border-radius: 5px;
     transition: .4s ease;
+    cursor: pointer;
 }
 
 button:active {
     transform: translateY(5px);
 }
+
+.main__form-overlay {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 1;
+    background: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(5px);
+    display: grid;
+    place-items: center;
+}
+
+.main__confirm-block {
+    width: 90%;
+    background: rgba(255,255,255,.8);
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    height: 13em;
+    display: grid;
+    align-content: center;
+    gap: 1em;
+    position: relative;
+}
+
+.main__confirm-block > h2 {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+.main__confirm-exit-btn {
+    position: absolute;
+    top: .8em;
+    background: rgba(0, 0, 0, .4);
+    right: .8em;
+    width: 2em;
+    height: 2em;
+    display: grid;
+    place-items: center;
+    border-radius: 2em;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.main__input-error-prompter--disabled,
+.main__form-overlay--disabled {
+    display: none;
+}
+
+.attribution {
+    border-top: 1px solid #aaa;
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    background: rgba(0,0,0,.02);
+    backdrop-filter: blur(5px);
+    font-size: .7rem;
+}
+
+.attribution, a {
+    color: #232323;
+    transition: .5s ease;
+}
+
+
+@media (min-width: 35.25em){    /*  FOR DESKTOPS  */
+
+    body {
+        padding-bottom: 5em;
+    }
+
+    .header__heading {
+        font-size: 2.5rem;
+        margin-bottom: .5em;
+    }
+
+    main {
+        width: 43em;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    .main__input-error-prompter {
+        font-size: .9rem;
+    }
+
+    button:hover {
+        filter: brightness(1.2);
+    }
+
+    .main__confirm-block > span:hover {
+        filter: brightness(1.2);
+        background: rgba(0,0,0,.2);
+    }
+
+    .attribution {
+        font-size: 1rem;
+    }
+
+    .attribution:hover {
+        background: rgba(0,0,0,.4);
+        color: #ccc;
+        font-weight: 400;
+    }
+    .attribution:hover a {
+        color: #eee;
+        font-weight: 500;
+    }
+
+}
+

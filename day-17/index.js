@@ -79,7 +79,7 @@ const personAccount = {
         return keys.map(key => parseInt(this.incomes[key])).reduce((a,b)=> a+b, 0)
     },
     accountInfo: function(){
-        return `Acc Name: ${this.firstName} ${this.lastName} \nTotal Income: ${this.totalExpense()} \nTotal Expenses: ${this.totalExpense()}`
+        return `Acc Name: ${this.firstName} ${this.lastName} \nTotal Income: ${this.totalIncome()} \nTotal Expenses: ${this.totalExpense()}`
     },
     addIncome: function(description, income){
         if(description === undefined || income === undefined) return 'Provide valid values'
