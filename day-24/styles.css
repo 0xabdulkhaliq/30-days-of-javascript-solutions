@@ -8,7 +8,7 @@ body {
     font-family: sans-serif;
     min-height: 100vh;
     color: #252525;
-    background: url(../images/galaxy.gif);
+    background: url(./images/galaxy.gif);
     background-size: 100%;
 }
 

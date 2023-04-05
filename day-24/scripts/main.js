@@ -21,7 +21,7 @@ function calculateWeight(){
                           <p class="result glass-bg g-place-center">The weight of the object on <b>${planetName}</b>
                               <span class="rounded g-place-center">${weight} N</span>
                           </p>
-                          <img src="../images/${planetName}.png" alt="${planetName}">
+                          <img src="./images/${planetName}.png" alt="${planetName}">
                           `  
 
 }
