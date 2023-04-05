@@ -7,3 +7,17 @@
 
 ![Bar Graph](https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/images/projects/dom_min_project_bar_graph_day_5.1.png)
 
+
+<br>
+
+### SOLUTION PREVIEW:
+
+
+| Project - Bar Graph Visualization |
+| :----:  |
+| ![Solution Preview 1](../images/Day-25-Project-Shot-1.webp) |
+| ![Solution Preview 2](../images/Day-25-Project-Shot-2.webp) |
+| |
+| Live Preview: [Here 🌐](https://0xabdulkhalid.github.io/30-days-of-javascript-solutions/day-25/) |
+
+<br>
